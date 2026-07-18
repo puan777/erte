@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11110f">
+    <meta name="description" content="PUAN777 RTP adalah dashboard RTP slot hari ini dengan update realtime WIB, provider hot, pola bermain, dan daftar game lokal yang ringan untuk mobile.">
+    <meta name="keywords" content="RTP slot, RTP slot hari ini, RTP realtime, PUAN777 RTP, pola slot, provider slot, game slot gacor">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="PUAN777 RTP">
+    <meta name="author" content="PUAN777">
+    <link rel="canonical" href="https://puan777.github.io/rtp/">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PUAN777 RTP">
+    <meta property="og:title" content="PUAN777 RTP - Update RTP Realtime">
+    <meta property="og:description" content="Board RTP slot realtime dengan provider hot, pola bermain, dan tampilan mobile responsive.">
+    <meta property="og:url" content="https://puan777.github.io/rtp/">
+    <meta property="og:image" content="https://puan777.github.io/rtp/assets/brand-logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PUAN777 RTP - Update RTP Realtime">
+    <meta name="twitter:description" content="Dashboard RTP slot hari ini dengan update realtime WIB dan provider hot.">
+    <meta name="twitter:image" content="https://puan777.github.io/rtp/assets/brand-logo.png">
+    <title>PUAN777 RTP - Update RTP Slot Realtime</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="assets/brand-logo.png">
+    <link rel="apple-touch-icon" href="assets/brand-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Oxanium:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PUAN777 RTP",
+        "url": "https://puan777.github.io/rtp/",
+        "description": "Dashboard RTP slot hari ini dengan update realtime WIB, provider hot, pola bermain, dan daftar game lokal.",
+        "inLanguage": "id-ID",
+        "publisher": {
+          "@type": "Organization",
+          "name": "PUAN777",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://puan777.github.io/rtp/assets/brand-logo.png"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="site-noise" aria-hidden="true"></div>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="PUAN777 RTP home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/brand-logo.png" alt="" width="32" height="32">
+          </span>
+          <span>
+            <strong data-brand-name>PUAN777 RTP</strong>
+            <small>Update RTP Realtime</small>
+          </span>
+        </a>
+        <div class="clock" aria-live="polite">
+          <span id="clockTime">--:-- WIB</span>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="command-band" aria-label="RTP dashboard">
+          <div class="ticker">
+            <span>RTP hari ini</span>
+            <strong id="summaryLine">Memuat data game...</strong>
+          </div>
+
+          <div class="stats-row" aria-label="Ringkasan RTP">
+            <div class="stat">
+              <small>Game</small>
+              <strong id="statGames">0</strong>
+            </div>
+            <div class="stat stat-hot">
+              <small>Hot</small>
+              <strong id="statHot">0</strong>
+            </div>
+            <div class="stat">
+              <small>Live Avg</small>
+              <strong id="statAvg">0%</strong>
+            </div>
+          </div>
+
+          <form class="search-panel" role="search">
+            <label for="searchInput">Cari game</label>
+            <div class="search-box">
+              <input id="searchInput" type="search" autocomplete="off" placeholder="Sweet, Gates, Mahjong...">
+              <button class="icon-button" type="button" id="clearSearch" aria-label="Bersihkan pencarian">X</button>
+            </div>
+          </form>
+
+          <div class="toolbar" aria-label="Kontrol daftar game">
+            <select id="sortSelect" aria-label="Urutkan game">
+              <option value="smart" selected>Rekomendasi</option>
+              <option value="hot">RTP tertinggi</option>
+              <option value="rising">Sedang naik</option>
+              <option value="az">Nama A-Z</option>
+              <option value="provider">Provider</option>
+            </select>
+            <select id="perPageSelect" aria-label="Jumlah game per halaman">
+              <option value="12">12 / page</option>
+              <option value="24" selected>24 / page</option>
+              <option value="48">48 / page</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="banner-strip" id="bannerStrip" aria-label="Banner"></section>
+
+        <nav class="provider-rail" id="providerRail" aria-label="Provider game"></nav>
+
+        <section class="game-section" aria-live="polite">
+          <div class="section-head">
+            <div>
+              <p>RTP hari ini</p>
+              <h1>Game Board</h1>
+            </div>
+            <span id="pageInfo">0/0</span>
+          </div>
+          <div class="game-grid" id="gameGrid"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <strong>Game belum ditemukan.</strong>
+            <span>Coba kata kunci lain atau pilih provider berbeda.</span>
+          </div>
+        </section>
+
+        <div class="pager" aria-label="Navigasi halaman">
+          <button type="button" id="prevPage">Prev</button>
+          <button type="button" id="nextPage">Next</button>
+        </div>
+      </main>
+    </div>
+
+    <template id="gameCardTemplate">
+      <article class="game-card">
+        <div class="poster-wrap">
+          <img class="poster" alt="" loading="lazy">
+          <span class="status-pill"></span>
+        </div>
+        <div class="game-body">
+          <div class="game-title-row">
+            <h2></h2>
+            <strong class="percentage"></strong>
+          </div>
+          <div class="meter" aria-hidden="true"><span></span></div>
+          <div class="game-meta">
+            <span class="provider-name"></span>
+            <span class="jam"></span>
+            <span class="trend-chip"></span>
+          </div>
+          <div class="patterns"></div>
+          <a class="play-link" href="https://puanlink.com/?referralid=maucuan88" rel="nofollow">Mainkan</a>
+        </div>
+      </article>
+    </template>
+
+    <script src="assets/config.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

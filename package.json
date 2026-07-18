@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:app",
+    "build:app": "node tools/build-app.mjs",
+    "check:app": "node --check assets/app.js"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^5.4.7",
+    "terser": "^5.49.0"
+  }
+}

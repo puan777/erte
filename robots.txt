@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://puan777.github.io/rtp/sitemap.xml
